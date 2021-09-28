@@ -1,0 +1,14 @@
+{
+  "name": "ajax",
+  "version": "1.0.0",
+  "description": "AJAX Tutorial",
+  "main": "AjaxCallback.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vk0808",
+  "license": "ISC",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}

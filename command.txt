@@ -1,0 +1,15 @@
+json-server --watch empDb.json
+
+curl -X GET -H "Content-Type:application/json" "http://localhost:3000/employees"
+curl -X GET -H "Content-Type:application/json" "http://localhost:3000/employees/1"
+curl -X POST -H "Content-Type:application/json" -d '{"name":"Lisa","salary":"20000"}' "http://localhost:3000/employees"
+curl -X PUT -H "Content-Type:application/json" -d '{"name":"Lisa","salary":"25000"}' "http://localhost:3000/employees/6"
+curl -X DELETE -H "Content-Type:application/json" "http://localhost:3000/employees/2"
+
+json-server --port 4000 --routes routes.json --watch empDb.json
+
+curl -X GET -H "Content-Type:application/json" "http://localhost:4000/employees/list"
+curl -X GET -H "Content-Type:application/json" "http://localhost:4000/employees/get/1"
+curl -X POST -H "Content-Type:application/json" -d '{"name":"Lisa","salary":"20000"}' "http://localhost:4000/employees/create"
+curl -X PUT -H "Content-Type:application/json" -d '{"name":"Lisa","salary":"25000"}' "http://localhost:4000/employees/update/6"
+curl -X DELETE -H "Content-Type:application/json" "http://localhost:4000/employees/delete/2"
